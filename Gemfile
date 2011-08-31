@@ -33,7 +33,6 @@ gem 'sqlite3'
 group :test, :development do
   gem 'cucumber-rails'
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'shoulda'
   gem 'fakeweb'
@@ -42,3 +41,4 @@ end
 gem "haml"
 gem "compass", ">= 0.11.5"
 gem "compass-960-plugin"
+gem 'factory_girl_rails'
