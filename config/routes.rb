@@ -1,4 +1,6 @@
 Chronos::Application.routes.draw do
+  resources :projects, :only => [:show]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
