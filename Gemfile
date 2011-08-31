@@ -30,7 +30,12 @@ gem 'sqlite3'
 #   gem 'webrat'
 # end
 
-group :test do
+group :test, :development do
   gem 'cucumber-rails'
   gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'shoulda'
 end
+
+gem "haml"
