@@ -20,13 +20,13 @@ $green: #4FB34F
 $red: #DF6262
 $yellow: #DFCA62
 
-$contrast: 40%
+$contrast: 30%
 
 $dark_yellow: darken($yellow, $contrast)
 $light_yellow: lighten($yellow, $contrast)
 
 $dark_green: darken($green, $contrast)
-$lighten_green: lighten($green, $contrast)
+$light_green: lighten($green, $contrast)
 
 h1
   +grid(16)
@@ -43,8 +43,12 @@ h1
   .pending
     :background $yellow
     :color $dark_yellow
+    :border 1px solid $yellow
     +text-shadow($light_yellow 0 1px)
+    +background-image(linear-gradient(bottom, $yellow, $light_yellow))
   .implemented
     :background $green
     :color $dark_green
-    +text-shadow($lighten_green 0 1px)
+    :border 1px solid $green
+    +text-shadow($light_green 0 1px)
+    +background-image(linear-gradient(bottom, $green, $light_green))

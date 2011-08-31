@@ -184,12 +184,26 @@ h1 {
 /* line 43, ../../app/stylesheets/screen.sass */
 #user_stories .pending {
   background: #dfca62;
-  color: #615414;
-  text-shadow: white 0 1px;
+  color: #8c791c;
+  border: 1px solid #dfca62;
+  text-shadow: #f9f5e1 0 1px;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #dfca62), color-stop(100%, #f9f5e1));
+  background-image: -webkit-linear-gradient(bottom, #dfca62, #f9f5e1);
+  background-image: -moz-linear-gradient(bottom, #dfca62, #f9f5e1);
+  background-image: -o-linear-gradient(bottom, #dfca62, #f9f5e1);
+  background-image: -ms-linear-gradient(bottom, #dfca62, #f9f5e1);
+  background-image: linear-gradient(bottom, #dfca62, #f9f5e1);
 }
-/* line 47, ../../app/stylesheets/screen.sass */
+/* line 49, ../../app/stylesheets/screen.sass */
 #user_stories .implemented {
   background: #4fb34f;
-  color: #102610;
-  text-shadow: #ddf1dd 0 1px;
+  color: #204920;
+  border: 1px solid #4fb34f;
+  text-shadow: #bae1ba 0 1px;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #4fb34f), color-stop(100%, #bae1ba));
+  background-image: -webkit-linear-gradient(bottom, #4fb34f, #bae1ba);
+  background-image: -moz-linear-gradient(bottom, #4fb34f, #bae1ba);
+  background-image: -o-linear-gradient(bottom, #4fb34f, #bae1ba);
+  background-image: -ms-linear-gradient(bottom, #4fb34f, #bae1ba);
+  background-image: linear-gradient(bottom, #4fb34f, #bae1ba);
 }
