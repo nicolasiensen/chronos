@@ -5,6 +5,7 @@
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 @import compass/reset
+@import compass/css3
 @import compass/utilities/general/clearfix
 @import 960/grid
 @import 960/text
@@ -12,6 +13,20 @@
 +text
 
 $ninesixty_columns: 16
+
+// http://colorschemedesigner.com/#4e400hWs0g0g0
+$blue: #5F4D9A
+$green: #4FB34F
+$red: #DF6262
+$yellow: #DFCA62
+
+$contrast: 40%
+
+$dark_yellow: darken($yellow, $contrast)
+$light_yellow: lighten($yellow, $contrast)
+
+$dark_green: darken($green, $contrast)
+$lighten_green: lighten($green, $contrast)
 
 h1
   +grid(16)
@@ -22,3 +37,14 @@ h1
 
 #user_stories
   +grid(16)
+  .pending, .implemented
+    :padding 5px
+    :font-weight bold
+  .pending
+    :background $yellow
+    :color $dark_yellow
+    +text-shadow($light_yellow 0 1px)
+  .implemented
+    :background $green
+    :color $dark_green
+    +text-shadow($lighten_green 0 1px)

@@ -150,7 +150,7 @@ fieldset {
   margin-bottom: 20px;
 }
 
-/* line 16, ../../app/stylesheets/screen.sass */
+/* line 31, ../../app/stylesheets/screen.sass */
 h1 {
   display: inline;
   float: left;
@@ -159,7 +159,7 @@ h1 {
   width: 940px;
 }
 
-/* line 19, ../../app/stylesheets/screen.sass */
+/* line 34, ../../app/stylesheets/screen.sass */
 #wrapper {
   margin-left: auto;
   margin-right: auto;
@@ -168,11 +168,28 @@ h1 {
   *zoom: 1;
 }
 
-/* line 23, ../../app/stylesheets/screen.sass */
+/* line 38, ../../app/stylesheets/screen.sass */
 #user_stories {
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 940px;
+}
+/* line 40, ../../app/stylesheets/screen.sass */
+#user_stories .pending, #user_stories .implemented {
+  padding: 5px;
+  font-weight: bold;
+}
+/* line 43, ../../app/stylesheets/screen.sass */
+#user_stories .pending {
+  background: #dfca62;
+  color: #615414;
+  text-shadow: white 0 1px;
+}
+/* line 47, ../../app/stylesheets/screen.sass */
+#user_stories .implemented {
+  background: #4fb34f;
+  color: #102610;
+  text-shadow: #ddf1dd 0 1px;
 }

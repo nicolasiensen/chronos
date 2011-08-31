@@ -4,4 +4,4 @@
     This project have no user story yet
   - else
     - @project.user_stories.each do |user_story|
-      = user_story.feature
+      %div{ :class => "#{user_story.status}" }= user_story.feature
