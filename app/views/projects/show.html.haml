@@ -1,5 +1,7 @@
-- if @project.user_stories.empty?
-  This project have no user story yet
-- else
-  - @project.user_stories.each do |user_story|
-    = user_story.feature
+%h1 My project
+#user_stories
+  - if @project.user_stories.empty?
+    This project have no user story yet
+  - else
+    - @project.user_stories.each do |user_story|
+      = user_story.feature

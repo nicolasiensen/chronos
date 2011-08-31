@@ -39,3 +39,5 @@ group :test, :development do
 end
 
 gem "haml"
+gem "compass", ">= 0.11.5"
+gem "compass-960-plugin"
