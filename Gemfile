@@ -36,6 +36,7 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'shoulda'
+  gem 'fakeweb'
 end
 
 gem "haml"
