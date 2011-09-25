@@ -1,5 +1,6 @@
 Chronos::Application.routes.draw do
   resources :projects, :only => [:show]
+  match '/auth/:provider/callback', :to => 'sessions#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
