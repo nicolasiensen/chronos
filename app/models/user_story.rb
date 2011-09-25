@@ -4,11 +4,11 @@ class UserStory < ActiveRecord::Base
   validates_uniqueness_of :role, :scope => [:feature, :benefit]
 
   def self.create_from_sentence sentence
-    sentence[/^As a (.*?)\nI want to (.*?)\nSo that (.*?)$/]
+    sentence[/^Afim de (.*)[\W]Como um (.*)[\W]Eu quero (.*)$/i]
     create(
-      :role => $1, 
-      :feature => $2, 
-      :benefit => $3)
+      :benefit => $1, 
+      :role => $2, 
+      :feature => $3)
   end
 
 end

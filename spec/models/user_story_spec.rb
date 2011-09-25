@@ -2,15 +2,13 @@ require 'spec_helper'
 
 describe UserStory do
   describe "#create_from_sentence" do
-
-    context "when the sentence follow the pattern As a... I want... So that..." do
-      let(:sentence) { "As a project manager\nI want to view my project user stories\nSo that I can keep track all of them" }
+    context "when the sentence follow the pattern Afim de... Como um... Eu quero..." do
+      let(:sentence) { "Afim de manter todas as user stories de um projeto sob controle\nComo um gerente de projetos\nEu quero ver as user stories de um projeto" }
       subject { UserStory.create_from_sentence sentence }
-      its(:role) { should be_== "project manager" }
-      its(:feature) { should be_== "view my project user stories" }
-      its(:benefit) { should be_== "I can keep track all of them" }
+      its(:benefit) { should be_== "manter todas as user stories de um projeto sob controle" }
+      its(:role) { should be_== "gerente de projetos" }
+      its(:feature) { should be_== "ver as user stories de um projeto" }
     end
-
   end
 end
 
