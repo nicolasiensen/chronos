@@ -5,11 +5,8 @@ class UserStory < ActiveRecord::Base
   validates_presence_of :role, :feature, :benefit
 
   def self.create_from_sentence sentence
-    sentence[/^Afim de (.*)[\W]Como um (.*)[\W]Eu quero (.*)$/i]
-    create(
-      :benefit => $1, 
-      :role => $2, 
-      :feature => $3)
+    sentence[/^(In order to|Afim de) (.*)[\W](As a|Como um) (.*)[\W](I want to|Eu quero) (.*)$/i]
+    create(:benefit => $2, :role => $4, :feature => $6)
   end
 
 end
