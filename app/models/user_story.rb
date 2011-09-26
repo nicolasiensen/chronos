@@ -2,6 +2,7 @@ class UserStory < ActiveRecord::Base
   STATUS = {:pending => "pending", :implemented => "implemented"}
   belongs_to :project
   validates_uniqueness_of :role, :scope => [:feature, :benefit]
+  validates_presence_of :role, :feature, :benefit
 
   def self.create_from_sentence sentence
     sentence[/^Afim de (.*)[\W]Como um (.*)[\W]Eu quero (.*)$/i]
