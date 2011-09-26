@@ -9,4 +9,8 @@
     = javascript_include_tag :defaults
     = csrf_meta_tag
   %body
-    #wrapper= yield
+    #wrapper
+      #header
+        #notice= flash[:notice]
+        = link_to "Sign in with Facebook", "/auth/facebook" if !signed_in?
+      = yield

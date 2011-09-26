@@ -1,3 +1,6 @@
 %h1 Projects
-- Project.all.each do |project|
-  .project= link_to project.name, project
+#projects
+  - if @projects.empty?
+    How sad, you have no project yet
+  - @projects.each do |project|
+    .project= link_to project.name, project
