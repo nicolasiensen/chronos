@@ -4,8 +4,8 @@ class Project < ActiveRecord::Base
 
   def update_from_cucumber
     json = JSON.parse Net::HTTP.get(URI.parse(source_url))
-    json.fetch("features").each do |feature|
-      user_stories.create_from_sentence feature.fetch("description")
+    json.fetch("features").each do |feature_json|
+      user_stories.create_from_cucumber feature_json
     end
   end
 

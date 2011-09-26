@@ -11,7 +11,7 @@ describe Project do
     end
 
     it "should call UserStory.create_from_sentence once" do
-      UserStory.should_receive(:create_from_sentence).with(/As a project manager\nI want to view my project user stories\nSo that I can keep track all of them/).once
+      UserStory.should_receive(:create_from_cucumber).exactly(4).times
       subject.update_from_cucumber
     end
 
