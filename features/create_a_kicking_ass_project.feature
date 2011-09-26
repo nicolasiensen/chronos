@@ -1,7 +1,7 @@
 Feature: Create a kicking ass project
+  In order to start manage a project
   As a project manager
   I want to create a kicking ass project
-  So that I can start to manage it using Chronos!
   
   @omniauth_test
   Scenario: The one where it's a valid project
