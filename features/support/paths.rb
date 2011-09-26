@@ -12,6 +12,8 @@ module NavigationHelpers
       '/'
     when /^this project page$/
       project_path @project
+    when /^all projects page$/
+      projects_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

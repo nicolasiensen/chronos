@@ -1,5 +1,9 @@
-Given /^there is a project$/ do
-  @project = Factory.create :project
+Given /^I am signed in$/ do
+  visit "/auth/facebook"
+end
+
+Given /^I have a project called "([^"]*)"$/ do |arg1|
+  @project = Factory.create :project, :name => arg1, :user => Authorization.find_by_uid("536687842").user
 end
 
 Given /^this project have a (.+) user story called "([^"]*)"$/ do |user_story_status, user_story_feature|
