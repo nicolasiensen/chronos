@@ -44,3 +44,4 @@ gem "compass-960-plugin"
 gem 'factory_girl_rails'
 gem 'omniauth'
 gem "cancan"
+gem 'inherited_resources'

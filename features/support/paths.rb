@@ -14,6 +14,8 @@ module NavigationHelpers
       project_path @project
     when /^all projects page$/
       projects_path
+    when /^the Kicking ass project page$/
+      project_path(Project.find_by_name "Kicking ass project")
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

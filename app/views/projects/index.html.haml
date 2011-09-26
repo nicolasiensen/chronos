@@ -1,4 +1,11 @@
 %h1 Projects
+= form_for @project do |form|
+  = form.label :name, "New project name"
+  = form.text_field :name
+  = form.label :source_url, "Where is your tests results?"
+  = form.text_field :source_url
+  = form.submit "Create project"
+
 #projects
   - if @projects.empty?
     How sad, you have no project yet
