@@ -1,7 +1,7 @@
 Feature: View all my projects
+  In order to browse between projects
   As a project manager
   I want to view all my projects
-  So that I can browse between them
 
   @omniauth_test
   Scenario: The one where I have a project

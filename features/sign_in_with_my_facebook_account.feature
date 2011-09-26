@@ -1,7 +1,7 @@
 Feature: Sign in with my Facebook account
+  In order to manage my personal projects
   As a project manager
   I want to sign in with my Facebook account
-  So that I can manage my own stuff
   
   @omniauth_test
   Scenario: The one where I am a new user

@@ -1,7 +1,7 @@
 Feature: View my project user stories
+  In order to keep track of all my project user stories
   As a project manager
   I want to view my project user stories
-  So that I can keep track all of them
   
   @omniauth_test
   Scenario: The one where the project have no user story
