@@ -1,4 +1,5 @@
 namespace :chronos do
+
   namespace :create do
     desc "Create a complete project"
     task :project => :environment do
@@ -8,4 +9,12 @@ namespace :chronos do
       puts "Created a project with id #{project.id}"
     end
   end
+
+  desc "Update all projects from cucumber"
+  task :update_from_cucumber => :environment do
+    Project.all.each do |project|
+      project.update_from_cucumber
+    end
+  end
+
 end
