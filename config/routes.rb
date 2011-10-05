@@ -1,4 +1,5 @@
 Chronos::Application.routes.draw do
+  put '/projects/:id/refresh', :to => 'projects#refresh', :as => :refresh_project
   resources :projects, :only => [:show, :index, :create]
   match '/auth/:provider/callback', :to => 'sessions#create'
   root :to => "projects#index"

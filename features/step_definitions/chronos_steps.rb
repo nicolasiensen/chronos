@@ -3,7 +3,8 @@ Given /^I am signed in$/ do
 end
 
 Given /^I have a project called "([^"]*)"$/ do |arg1|
-  @project = Factory.create :project, :name => arg1, :user => Authorization.find_by_uid("536687842").user
+  @project = Factory.create :project, :name => arg1, :user => Authorization.find_by_uid("536687842").user, :source_url => "http://chronos-pm.heroku.com/cucumber.json"
+  FakeWeb.register_uri(:get, @project.source_url, :body => File.open("#{Rails.root}/spec/fixtures/cucumber.json").read)
 end
 
 Given /^this project have a (.+) user story called "([^"]*)"$/ do |user_story_status, user_story_feature|

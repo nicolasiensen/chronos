@@ -1,5 +1,7 @@
 %h1= @project.name
 #user_stories
+  = form_for @project, :url => refresh_project_path(@project) do |form|
+    = form.submit "Refresh"
   - if @project.user_stories.empty?
     This project have no user story yet
   - else
