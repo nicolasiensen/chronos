@@ -1,10 +1,12 @@
 class ProjectsController < InheritedResources::Base
+  before_filter :only => [:create] { params[:project][:user_id] = current_user.id }
+
   def show
     @project = Project.find params[:id]
   end
 
   def index
-    @projects = Project.all
+    @projects = signed_in? ? current_user.projects : []
     @project = Project.new
   end
 
